@@ -1,0 +1,25 @@
+{
+  "name": "Speeder",
+  "version": "0.1",
+  "description": "Speed Reading assistant",
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "http://*/",
+    "https://*/"
+  ],
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "speeder.js"
+      ]
+    }
+  ],
+  "manifest_version": 2
+}
